@@ -13,19 +13,19 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'python -m pip install -r requirements.txt'
+                bat '"C:\\Users\\JCT\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pip install -r requirements.txt'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'python -m pytest'
+                bat '"C:\\Users\\JCT\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m pytest'
             }
         }
 
         stage('Build') {
             steps {
-                bat 'python -m compileall .'
+                bat '"C:\\Users\\JCT\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" -m compileall .'
             }
         }
     }
